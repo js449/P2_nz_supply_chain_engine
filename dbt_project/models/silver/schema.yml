@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_road_events
+    description: "The primary table for road events with calculated urgency levels."
+    columns:
+      - name: event_id
+        description: "The unique identifier for the event."
+        tests:
+          - unique # Check 1: No two rows have the same ID
+          - not_null # Check 2: Every row must have an ID
+
+      - name: urgency_level
+        description: "The priority of the event based on impact score."
+        tests:
+          - accepted_values:
+              arguments:
+                values: [ "CRITICAL", "MAJOR", "MINOR" ]
+
+      - name: location
+        description: "The location of the road event."
+        tests:
+          - not_null # Check 4: We can't help the supply chain if we don't know where it is

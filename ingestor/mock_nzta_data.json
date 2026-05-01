@@ -1,0 +1,37 @@
+[
+  {
+    "event_id": 1001,
+    "event_type": "Construction",
+    "impact_score": 4.5,
+    "location": "SH1 - Christchurch",
+    "status": "Active"
+  },
+  {
+    "event_id": 1002,
+    "event_type": "Accident",
+    "impact_score": "HIGH",
+    "location": "SH73 - Arthur's Pass",
+    "status": "Resolved"
+  },
+  {
+    "event_id": 1003,
+    "event_type": "Alien Invasion",
+    "impact_score": 11.0,
+    "location": "Unknown",
+    "status": "Active"
+  },
+  {
+    "event_id": null,
+    "event_type": "Road Closure",
+    "impact_score": 8.2,
+    "location": "SH1 - Kaikoura",
+    "status": "Active"
+  },
+  {
+    "event_id": 1005,
+    "event_type": "Weather",
+    "impact_score": -1,
+    "location": "",
+    "status": "Active"
+  }
+]

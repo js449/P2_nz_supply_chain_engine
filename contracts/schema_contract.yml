@@ -1,0 +1,23 @@
+version: 1.0
+project: nz_supply_chain
+
+# The rules the Ingestor must follow
+schema:
+  event_id:
+    type: integer
+    required: true
+  event_type:
+    type: string
+    allowed: [ "Construction", "Accident", "Weather", "Road Closure" ]
+  impact_score:
+    type: float
+    min: 0.0
+    max: 10.0
+  location:
+    type: string
+    required: true
+
+# Monitoring configuration
+monitoring:
+  log_level: "INFO"
+  log_file: "logs/ingestor.log"

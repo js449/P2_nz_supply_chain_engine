@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: p2_nz_supply_chain_engine-db-1
+    ports:
+      - "5433:5432" 
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=nz_supply_chain
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  app:
+    build: .
+    container_name: p2_nz_supply_chain_engine-app-1
+    depends_on:
+      - db
+    volumes:
+      - ./ingestor:/app/ingestor # Matches your Masterplan folder
+      - ./contracts:/app/contracts
+      - ./logs:/app/logs
+
+volumes:
+  postgres_data:

@@ -1,0 +1,19 @@
+# Python Virtual Environment
+venv/
+.env
+
+# dbt Artifacts & Logs
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+
+# Python Logs
+logs/*.log
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

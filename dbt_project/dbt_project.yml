@@ -1,0 +1,17 @@
+name: "dbt_nz_supply_chain"
+version: "1.0.0"
+
+# This matches the name we put in profiles.yml
+profile: "nz_supply_chain"
+
+model-paths: [ "models" ]
+analysis-paths: [ "analyses" ]
+test-paths: [ "tests" ]
+seed-paths: [ "seeds" ]
+macro-paths: [ "macros" ]
+
+models:
+  dbt_nz_supply_chain:
+    # This tells dbt to create "Views" by default (like virtual tables)
+    # We can change this to 'table' later for performance
+    +materialized: view
