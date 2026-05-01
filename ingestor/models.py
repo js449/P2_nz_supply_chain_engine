@@ -1,6 +1,8 @@
 from pydantic import BaseModel, Field, field_validator, ValidationError
 from typing import Optional, Literal
 
+# Define the RoadEvent model with validation  
+# pydantic's BaseModel is used to create the model, and Field is used to set constraints on the impact_score.
 class RoadEvent(BaseModel):
     event_id: int 
     event_type: Literal["Construction", "Accident", "Weather", "Road Closure"]

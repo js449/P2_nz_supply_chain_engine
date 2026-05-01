@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./ingestor:/app/ingestor # Matches your Masterplan folder
+      - ./ingestor:/app/ingestor # Matches Masterplan folder
       - ./contracts:/app/contracts
       - ./logs:/app/logs
 

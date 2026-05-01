@@ -15,9 +15,9 @@ models:
         tests:
           - accepted_values:
               arguments:
-                values: [ "CRITICAL", "MAJOR", "MINOR" ]
+                values: [ "CRITICAL", "MAJOR", "MINOR" ] # Check 3: Urgency level must be one of the defined categories
 
       - name: location
         description: "The location of the road event."
         tests:
-          - not_null # Check 4: We can't help the supply chain if we don't know where it is
+          - not_null # Check 4: Every event must have a location 

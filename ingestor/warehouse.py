@@ -11,7 +11,7 @@ class PostgresWarehouse:
             "user": 'postgres',
             "password": 'postgres'
         }
-        # This calls the hidden method below to set up your DB automatically
+        # This calls the hidden method below to set up DB automatically
         self._ensure_bronze_table_exists() 
 
     def _ensure_bronze_table_exists(self):

@@ -6,7 +6,7 @@ def run_command(command, stage_name, cwd=None):
     """Executes a terminal command and stops the pipeline on failure."""
     print(f"--- [STARTING] {stage_name} ---")
     
-    # We use subprocess to run the command just like you do in the terminal
+    # We use subprocess to run the command just like we do in the terminal
     result = subprocess.run(command, shell=True, cwd=cwd)
     
     if result.returncode != 0:

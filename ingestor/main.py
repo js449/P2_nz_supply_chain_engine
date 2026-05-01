@@ -4,7 +4,7 @@ from models import RoadEvent
 from warehouse import PostgresWarehouse
 from pydantic import ValidationError
 
-# Setup logging to our Masterplan folder
+# Setup logging configuration
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -14,7 +14,7 @@ logging.basicConfig(
 def run_pipeline():
     db = PostgresWarehouse()
     
-    # Load our "Big Messy Data"
+    # Load data from mock JSON file
     try:
         with open('ingestor/mock_nzta_data.json', 'r') as f:
             data = json.load(f)

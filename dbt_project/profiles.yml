@@ -6,7 +6,7 @@ nz_supply_chain:
       host: 127.0.0.1
       user: postgres
       password: postgres
-      port: 5433 # <--- MUST match your docker-compose '5433:5432' mapping
+      port: 5433 # <--- MUST match docker-compose '5433:5432' mapping
       dbname: nz_supply_chain
       schema: public
       threads: 1

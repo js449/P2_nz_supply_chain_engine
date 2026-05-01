@@ -3,7 +3,7 @@
 SELECT 
     location,
     COUNT(event_id) as total_events,
-    -- We only want to count the high-priority ones
+    -- only count the high-priority ones
     COUNT(CASE WHEN urgency_level = 'CRITICAL' THEN 1 END) as critical_events,
     -- Calculate a risk percentage
     ROUND(
